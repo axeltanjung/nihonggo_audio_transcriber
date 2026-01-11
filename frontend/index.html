@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -8,6 +9,8 @@
   <h2>🎧 Japanese Audio Transcriber</h2>
   <input type="file" id="file"/>
   <button onclick="upload()">Transcribe</button>
+  <div id="timer" style="margin-top:12px;color:#22c55e;"></div>
+  <button onclick="downloadSRT()">Download SRT</button>
   <pre id="result"></pre>
 </div>
 <script src="app.js"></script>

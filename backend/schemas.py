@@ -11,3 +11,4 @@ class TranscriptionResponse(BaseModel):
     segments: List[TranscriptSegment]
     total_segments: int
     duration: float
+    eta_seconds: int
