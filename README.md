@@ -6,17 +6,17 @@ Production-grade Japanese speech-to-text web application powered by Whisper larg
 
 This project provides an end-to-end audio/video → Japanese transcript pipeline with:
 
-Automatic video → MP3 conversion
+- Automatic video → MP3 conversion
 
-High-accuracy Whisper large-v3 ASR
+- High-accuracy Whisper large-v3 ASR
 
-Sentence-level timestamps
+- Sentence-level timestamps
 
-Clean web UI for uploading & viewing results
+- Clean web UI for uploading & viewing results
 
-Typed FastAPI backend with OpenAPI schema
+- Typed FastAPI backend with OpenAPI schema
 
-Designed as a real SaaS-like ML system, not a notebook demo.
+- Designed as a real SaaS-like ML system, not a notebook demo.
 
 ## Architecture
 User → Web UI → FastAPI API → FFmpeg Audio Pipeline → Whisper ASR → Timestamped Transcript
@@ -41,21 +41,28 @@ audio-transcriber/
 
 ## Installation
 1. Clone repository
-git clone https://github.com/axeltanjung/nihonggo-audio-transcriber.git
-cd audio-transcriber
+- git clone https://github.com/axeltanjung/nihonggo-audio-transcriber.git
+- cd audio-transcriber
 
 2. Setup Python environment
-python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
-pip install -r backend/requirements.txt
+- python -m venv venv
+- source venv/bin/activate   # Windows: venv\Scripts\activate
+- pip install -r backend/requirements.txt
 
 3. Install FFmpeg
+
 OS	Command
+
 Ubuntu	sudo apt install ffmpeg
+
 Mac	brew install ffmpeg
+
 Windows	Download from ffmpeg.org
+
 ▶ Run Application
+
 Start Backend
+
 uvicorn backend.main:app --reload
 
 
